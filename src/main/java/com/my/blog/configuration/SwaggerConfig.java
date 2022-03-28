@@ -16,32 +16,25 @@ import springfox.documentation.swagger2.annotations.EnableSwagger2;
 @Configuration
 @EnableSwagger2
 public class SwaggerConfig {
+    // http://localhost:8080/swagger-ui.html 로 접근
     @Bean
-    public Docket api() {
+    public Docket api(){
         return new Docket(DocumentationType.SWAGGER_2)
                 .select()
                 .apis(RequestHandlerSelectors.any())
                 .paths(PathSelectors.any())
+                .build().apiInfo(apiInfo());
+
+    }
+
+    private ApiInfo apiInfo() {
+        String description = "Welcome Log Company";
+        return new ApiInfoBuilder()
+                .title("SWAGGER TEST")
+                .description(description)
+                .version("1.0")
                 .build();
     }
-//    @Bean
-//    public Docket api(){
-//        return new Docket(DocumentationType.SWAGGER_2)
-//                .select()
-//                .apis(RequestHandlerSelectors.any())
-//                .paths(PathSelectors.any())
-//                .build().apiInfo(apiInfo());
-//
-//    }
-//
-//    private ApiInfo apiInfo() {
-//        String description = "Welcome Log Company";
-//        return new ApiInfoBuilder()
-//                .title("SWAGGER TEST")
-//                .description(description)
-//                .version("1.0")
-//                .build();
-//    }
 
 }
 
