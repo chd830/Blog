@@ -5,12 +5,12 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 @Controller
-@RequestMapping("/main")
+@RequestMapping("/")
 public class PageController {
 
-    @GetMapping("/")
+    @GetMapping("/draganddrop")
     public String main() {
-        return "main";
+        return "draganddrop";
     }
 
     @GetMapping("/index")
