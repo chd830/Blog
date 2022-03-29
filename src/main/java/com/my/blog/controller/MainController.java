@@ -16,7 +16,7 @@ public class MainController {
         return "index";
     }
 
-    // logger level을
+    // logger 레벨 설정 부분에서 debug와 trace는 출력되지 않음
     @GetMapping("/log")
     public void log() throws Exception {
        log.fatal("FATAL");
