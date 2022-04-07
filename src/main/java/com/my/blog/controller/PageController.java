@@ -9,12 +9,17 @@ import org.springframework.web.bind.annotation.RequestMapping;
 public class PageController {
 
     @GetMapping("/draganddrop")
-    public String main() {
+    public String drag() {
         return "draganddrop";
     }
 
     @GetMapping("/index")
     public String idx() {
         return "index";
+    }
+
+    @GetMapping("/")
+    public String main() {
+        return "main";
     }
 }

@@ -28,6 +28,8 @@ dependencies {
     implementation 'org.springframework.boot:spring-boot-starter-data-mongodb'
     testImplementation 'org.springframework.boot:spring-boot-starter-test'
     implementation group: 'javax.persistence', name: 'javax.persistence-api', version: '2.2'
+    // markdown
+    implementation 'com.atlassian.commonmark:commonmark:0.13.0'
     // lombok
     compileOnly 'org.projectlombok:lombok'
     annotationProcessor 'org.projectlombok:lombok'

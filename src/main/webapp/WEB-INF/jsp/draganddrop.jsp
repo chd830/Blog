@@ -36,14 +36,11 @@
             <td><div ondrop="drop(event)" ondragover="allowDrop(event)"></div></td>
         </tr>
         <tr>
-<%--            <td><div ondrop="drop(event)" ondragover="allowDrop(event)"></div></td>--%>
             <td><div ondrop="drop(event)" ondragover="allowDrop(event)"></div></td>
             <td><div ondrop="drop(event)" ondragover="allowDrop(event)"></div></td>
         </tr>
     </table>
 </div>
-<%--<footer>--%>
-<%--</footer>--%>
 </body>
 </html>
 
