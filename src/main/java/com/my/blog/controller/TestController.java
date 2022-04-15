@@ -1,15 +1,21 @@
 package com.my.blog.controller;
 
+import com.my.blog.data.EventDoc;
+import com.my.blog.service.EventService;
 import io.swagger.annotations.ApiOperation;
 import lombok.extern.log4j.Log4j2;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.*;
+
+import java.util.List;
 
 @Log4j2
 @RestController
 @RequestMapping("/test/api")
-public class MainController {
+public class TestController {
+
+    @Autowired
+    private EventService service;
 
     @GetMapping("/index")
     public String index() {
@@ -33,4 +39,25 @@ public class MainController {
         return "hello, world";
     }
 
+
+    @GetMapping("/getevent")
+    public void getEvent(@RequestParam String id) {
+        try {
+            System.out.println(service.getEvent(id));
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+
+    @GetMapping("/geteventlist")
+    public void getEventList(@RequestParam String title) {
+        List<EventDoc> list = service.getEventList(title);
+        for(EventDoc d : list)
+            System.out.println(d);
+    }
+
+    @PostMapping("/insert")
+    public void insertEvent(@RequestBody EventDoc doc) {
+        service.insertEvent(doc);
+    }
 }

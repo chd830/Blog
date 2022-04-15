@@ -15,4 +15,12 @@ public class EventDoc {
     private String title;
     private String image;
 
+    @Override
+    public String toString() {
+        return "EventDoc{" +
+                "_id='" + _id + '\'' +
+                ", title='" + title + '\'' +
+                ", image='" + image + '\'' +
+                '}';
+    }
 }
