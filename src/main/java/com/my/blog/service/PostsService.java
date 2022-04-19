@@ -1,6 +1,5 @@
 package com.my.blog.service;
 
-import com.my.blog.data.EventDoc;
 import com.my.blog.data.Posts;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.mongodb.core.MongoTemplate;
