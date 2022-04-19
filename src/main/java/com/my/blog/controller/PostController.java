@@ -1,8 +1,6 @@
 package com.my.blog.controller;
 
-import com.my.blog.data.EventDoc;
 import com.my.blog.data.Posts;
-import com.my.blog.service.EventService;
 import com.my.blog.service.PostsService;
 import io.swagger.annotations.ApiOperation;
 import lombok.extern.log4j.Log4j2;
