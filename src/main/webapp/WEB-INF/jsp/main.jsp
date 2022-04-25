@@ -43,11 +43,10 @@
                     var tag = document.createElement('p');
                     tag.setAttribute('class', 'ptag');
                     tag.setAttribute('style', 'margin: 0px; padding: 0px');
-                    tag.innerHTML += "<p>"+lines[i]+"</p>\n";
+                    tag.innerHTML += "<p>"+":"+lines[i]+"</p>\n";
                     parent.appendChild(tag);
                 }
             }
-
         }
     </script>
 </head>
