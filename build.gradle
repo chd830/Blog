@@ -6,7 +6,9 @@ plugins {
 
 group = 'com.my'
 version = '0.0.1-SNAPSHOT'
-sourceCompatibility = '11'
+//sourceCompatibility = '11'
+sourceCompatibility = 8
+targetCompatibility = 8
 
 configurations {
     compileOnly {

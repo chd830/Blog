@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.RestController;
 @Log4j2
 @RestController
 @RequestMapping("/test/api")
-public class MainController {
+public class TestController {
 
     @GetMapping("/index")
     public String index() {
